@@ -1,0 +1,57 @@
+main {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+footer {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: larger;
+}
+
+div#table {
+	width: 25%;
+}
+
+div#table form {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-top: 2rem;
+}
+
+div#table form button {
+	font-size: xx-large;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table thead {
+	line-height: 2.5rem;
+	text-align: left;
+}
+
+table tbody {
+	line-height: 2rem;
+}
+
+table, td {
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+table tbody td:hover {
+	background-color: #ffffa5;
+}
+
+.highlight {
+	background-color: #ffffa5;
+}

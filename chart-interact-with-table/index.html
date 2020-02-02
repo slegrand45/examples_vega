@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test Vega</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vega"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+	<script type="module">
+		import { main } from './main.js'
+		(function () {
+			function ready(f) {
+				if (document.readyState != 'loading'){
+					f()
+				} else {
+					document.addEventListener('DOMContentLoaded', f)
+				}
+			}
+			ready(main)
+		})()
+	</script>
+</head>
+<body>
+	<main role="main">
+		<div id="graph"></div>
+		<div id="table">
+			<myvega-table></myvega-table>
+			<form>
+				<button id="minus"> - 10 </button>
+				&nbsp;
+				<button id="plus"> + 10 </button>
+			</form>
+		</div>
+	</main>
+	<footer>
+		<ul>
+			<li>Move your pointer on the graph bars, the corresponding table cell will be highlighted.</li>
+			<li>Move your pointer on the table cells, the corresponding graph bar will be highlighted.</li>
+			<li>Use the form buttons to decrease/increase the data, the table and the graph will be updated.</li>
+		</ul>
+	</footer>
+</body>
+</html>
